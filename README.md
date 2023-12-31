@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+初めてのRuby on Rails ミニQ&Aサイト開発
 
-Things you may want to cover:
+ミニQ&Aのサビすを制作を通じて
+ - CRUDアプリケーション開発の基礎を学習
+ - アプリ開発の流れを体験
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+version
+ - Ruby3.2
+ - Rails7
