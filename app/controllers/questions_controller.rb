@@ -1,5 +1,8 @@
 class QuestionsController < ApplicationController
+    # 質問一覧表紙
     def index
+        @questions = Question.all
+        p @questions
     end
 
     def show
@@ -19,9 +22,12 @@ class QuestionsController < ApplicationController
         # Questionモデルを初期化
         @question = Question.new(question_params)
         # QuetionモデルをDBへ保存
-        @question.save
-        # showレダイレクト
-        redirect_to @question
+        if @question.save
+            # showレダイレクト
+            redirect_to @question
+        else
+            render 'new', status: :unprocessable_entity
+        end
     end
 
     def edit
