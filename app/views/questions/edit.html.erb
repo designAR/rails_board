@@ -1,0 +1,28 @@
+<h1>Edit</h1>
+<%= form_with model: @question do |form| %>
+    <% if @question.errors.any? %>
+    <div>
+        <ul>
+            <% @question.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+<div>
+    <%= form.label :title %>
+    <%= form.text_field :title %><br><br>
+</div>
+<div>
+    <%= form.label :name %>
+    <%= form.text_field :name %><br><br>
+</div>
+<div>
+    <%= form.label :content %>
+    <%= form.text_area :content %><br><br>
+</div>
+<div>
+    <%= form.submit %>
+</div>
+
+<% end %>
